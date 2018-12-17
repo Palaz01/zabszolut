@@ -1,0 +1,5 @@
+.container {
+   @include from ($fullhd) {
+      max-width: 1260px;
+   }
+}

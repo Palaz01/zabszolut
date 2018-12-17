@@ -159,3 +159,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+require_once('navwalker.php');
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'menuname' ),
+) );
+

@@ -5,7 +5,7 @@
 */
 
 get_header(); ?>
-
-<h1>Hellóóóóó</h1>
-
+   <div class="container">
+      <h1>Halló</h1>
+   </div>
 <?php get_footer(); ?>
