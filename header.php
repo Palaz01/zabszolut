@@ -20,11 +20,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="has-navbar-fixed-top" <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<div>
-			<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+			<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
 				<div class="container">
 					<div class="navbar-brand">
 							<a class="navbar-item" href="https://github.com/Poruno/Bulma-Navwalker">

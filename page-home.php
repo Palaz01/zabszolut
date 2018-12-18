@@ -44,4 +44,27 @@ get_header(); ?>
 	</div>	
 </section>
 
+<section class="introduction">
+	<div class="container">
+		<div class="card">
+			<div class="columns is-marginless">
+				<div class="column is-paddingless">
+					<img class="introduction-image" src="<?php bloginfo('template_directory'); ?>/assets/images/oatfield.jpg" alt="oatfield">
+				</div>
+				<div class="column introduction-content">
+					<div>
+						<h2>A Kölln történet</h2>
+						<p>A Kölln cég történetének kezdete 200 évvel ezelőttre tehető, amikor is Elmshorban, Hans-Hinrich Kölln lefektette a Kölln cég alapköveit, mely mára az egyik legsikeresebb német élelmiszer márkává nőtte ki magát. Ez a Németországban középméretűnek számító cég a piacon elérhető legjobb minőségű zabból készült pelyheket és más zab alapú reggeliző termékeket állít elő a német és a nemzetközi piacok számára.</p>
+						<a href="#" class="simple-link">
+							<span>Tovább a bemutatkozáshoz</span>
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/next.svg" alt="">
+						</a>
+						<img class="top-right-img" src="<?php bloginfo('template_directory'); ?>/assets/images/oat.jpg" alt="oat">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
 <?php get_footer(); ?>
