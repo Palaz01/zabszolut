@@ -1,0 +1,13 @@
+.button {
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 14px;
+   min-width: 280px;
+   height: 50px;
+
+   &.is-rounded {
+      padding-left: 40px;
+      padding-right: 40px;
+   }
+}
+ 

@@ -24,31 +24,33 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<div>
-			<nav class="navbar container" role="navigation" aria-label="main navigation">
-				<div class="navbar-brand">
-						<a class="navbar-item" href="https://github.com/Poruno/Bulma-Navwalker">
-							<img class="brand-image" src=""/>
-						</a>
+			<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+				<div class="container">
+					<div class="navbar-brand">
+							<a class="navbar-item" href="https://github.com/Poruno/Bulma-Navwalker">
+								<img class="brand-image" src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png"/>
+							</a>
 
-						<button class="button navbar-burger" data-target="primary-menu">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
+							<button class="button navbar-burger" data-target="primary-menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+					</div>
+					<div class="navbar-menu">
+						<?php
+						wp_nav_menu( array(
+							'theme_location'    => 'primary',
+							'depth'             => 2,
+							'container'         => false,
+							// 'items_wrap'     => 'div',
+							'menu_class'        => 'navbar-end',
+							'after'             => "</div>",
+							'walker'            => new Navwalker())
+						);
+						?>
+					</div>
 				</div>
-				<?php
-				wp_nav_menu( array(
-						'theme_location'    => 'primary',
-						'depth'             => 2,
-						'container'         => false,
-						// 'items_wrap'     => 'div',
-						'menu_class'        => 'navbar-menu',
-						'menu_id'           => 'primary-menu',
-						'after'             => "</div>",
-						'walker'            => new Navwalker())
-				);
-				?>
-
 			</nav>
 		</div>
 	</header><!-- #masthead -->
