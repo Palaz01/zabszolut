@@ -67,4 +67,87 @@ get_header(); ?>
 	</div>	
 </section>
 
+<section class="advantages">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-three-fifths is-offset-one-fifth">
+				<h2 class="has-text-centered">Zabpehely</h2>
+				<p class="has-text-centered">Különbség van zabpehely és zabpehely között, mert a nyers zab kiválasztása és feldolgozása döntő jelentőségű a termék minősége szempontjából. Míg sok kenyérliszt őrlésénél eltávolítják a gabonaszem értékes csíráját és a külső héjakat, a Kölln zabpelyheknél csakis az egész szemeket dolgozzák fel. Ezért a zabpelyhek mindig megőrzik a teljes tápértéket és a teljes ízt. Így lesz minden zabszolút egészséges!</p>
+			</div>
+		</div>
+		<div class="columns is-aligncenter">
+			<div class="column">
+				<h2>Egészségvédelem</h2>
+				<p>A rendkívül fontos táplálék az emésztőrendszer megfelelő működése szempontjából, emellett nyugtató hatással van a szervezetre, és szabályozza a test energiaáramlását. Fogyasztása erősíti a lép-hasnyálmirigyet, eltávolítja az emésztőtraktusból és az érrendszerből a koleszterint, emellett bélrendszeri problémák, többek között felfúvódás esetén is alkalmazhatod.</p>
+			</div>
+			<div class="column is-flex is-justifycenter">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/health.jpg" alt="health">
+			</div>
+		</div>
+		<div class="columns is-aligncenter">
+			<div class="column is-flex is-justifycenter">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/health2.jpg" alt="healthy">
+			</div>
+			<div class="column">
+				<h2>Csupa egészség!</h2>
+				<p>A zab serkenti a bélrendszerben zajló folyamatokat, és bizonyos fokig megakadályozza, hogy a méreganyagok felszívódjanak. Egyfajta nyákot képez a bélrendszerben, mely által a salakanyag könnyebben tud távozni a szervezetből. Ezért fontos a teljes kiőrlésű pékáru - amiből igyekezz minél többet fogyasztani -, de napjainkig fennmaradt a zabkása is - mint a gyomor-bélbetegségekre használt jól bevált szer. </p>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<section class="events">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-three-fifths is-offset-one-fifth events-intro">
+				<h2 class="has-text-centered">Események</h2>
+				<p class="has-text-centered">In varius ut est lacinia ultrices. Nullam in nulla tellus. Praesent mi mauris, vestibulum eu ante vitae, vehicula pharetra tortor.</p>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
+				<div class="event-card columns">	
+					<div class="column is-flex is-justifycenter">
+						<div class="event-card-img">
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/mock/event-1.jpg" alt="">
+						</div>
+					</div>
+					<div class="column is-flex is-aligncenter is-paddingless is-three-fifths">
+						<div class="card-content">
+							<span>2018.július</span>
+							<h4 class="title is-size-4">Kölln akció</h4>
+							<p>Proin a orci a turpis hendrerit tempor. Cras at elementum mi, vitae auctor libero. Donec nunc eros, maximus...</p>
+							<a href="#" class="simple-link">
+								<span>Részletek</span>
+								<img src="<?php bloginfo('template_directory'); ?>/assets/images/next.svg" alt="">
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="column">
+				<div class="event-card columns">	
+					<div class="column is-flex is-justifycenter">
+						<div class="event-card-img">
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/mock/event-2.jpg" alt="">
+						</div>
+					</div>
+					<div class="column is-flex is-aligncenter is-paddingless is-three-fifths">
+						<div class="card-content">
+							<span>2018.szeptember</span>
+							<h4 class="title is-size-4">Facebook kampány</h4>
+							<p>Proin a orci a turpis hendrerit tempor. Cras at elementum mi, vitae auctor libero. Donec nunc eros, maximus...</p>
+							<a href="#" class="simple-link">
+								<span>Részletek</span>
+								<img src="<?php bloginfo('template_directory'); ?>/assets/images/next.svg" alt="">
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php get_footer(); ?>

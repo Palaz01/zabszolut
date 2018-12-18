@@ -1,0 +1,29 @@
+.event-card {
+   @extend .card;
+
+   &-img {
+      @include size(225px, 200px);
+      border-radius: 10px;
+      box-shadow: 3.078px 3.94px 16px 0px rgba(0, 0, 0, 0.13);
+      margin-top: -40px;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 10px;
+      }
+   }
+
+   span {
+      font-size: 12px;
+      font-weight: 800; 
+      text-transform: uppercase;
+   }
+
+   p {
+      margin-bottom: 20px;
+   }
+}
+
+ 
