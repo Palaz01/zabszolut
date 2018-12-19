@@ -162,6 +162,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 require_once('navwalker.php');
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'menuname' ),
+	 'primary' => __( 'Primary Menu', 'menuname' ),
+	 'secondary' => __( 'Footer Menu', 'menuname' ),
+	 'bottom' => __( 'Bottom Footer Menu', 'menuname' )
 ) );
 
