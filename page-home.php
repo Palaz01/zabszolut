@@ -93,8 +93,26 @@ get_header(); ?>
 				<p>A zab serkenti a bélrendszerben zajló folyamatokat, és bizonyos fokig megakadályozza, hogy a méreganyagok felszívódjanak. Egyfajta nyákot képez a bélrendszerben, mely által a salakanyag könnyebben tud távozni a szervezetből. Ezért fontos a teljes kiőrlésű pékáru - amiből igyekezz minél többet fogyasztani -, de napjainkig fennmaradt a zabkása is - mint a gyomor-bélbetegségekre használt jól bevált szer. </p>
 			</div>
 		</div>
+	</div>	
+</section>
+
+<section class="testimonials">
+	<div class="overlay"></div>
+	<div class="container">
+		<h2 class="has-text-centered">Akik már szeretik ha valami zabos</h2>
+		<img src="<?php bloginfo('template_directory'); ?>/assets/images/quotations.svg" alt="">
+		<div class="testimonials-slider">
+			<div class="slide">
+				<p class="has-text-centered">A zabtejjel megoldódott a tejallergia problémám. Főzéshez, sütéshez is tudom használni, akár kakaót is ihatok. Nagyon finom, de kétségtelen hogy az ízét meg kell szokni. <br><span>- B. Mártika</span></p>
+			</div>
+			<div class="slide">
+				<p class="has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis diam urna, in pretium erat pellentesque nec. Suspendisse tristique in mauris porta varius. <br><span>- Spongya Bob</span></p>
+			</div>
+			<div class="slide">
+				<p class="has-text-centered">In imperdiet libero purus, a tempus nibh euismod ut. Nulla a felis in diam egestas bibendum. Nulla cursus mattis erat, sit amet imperdiet enim tincidunt sed. <br><span>- Tunya Csáp</span></p>
+			</div>			
+		</div>
 	</div>
-	
 </section>
 
 <section class="events">
@@ -146,6 +164,9 @@ get_header(); ?>
 					</div>					
 				</div>
 			</div>
+		</div>
+		<div class="is-full is-flex is-justifycenter">
+			<a href="#" class="button is-primary is-rounded">Tovább az eseményekhez</a>
 		</div>
 	</div>
 </section>

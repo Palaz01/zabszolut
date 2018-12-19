@@ -6,4 +6,9 @@ $(document).ready(function(){
       autoplay: true,
       fade: true
    });
+
+   $('.testimonials-slider').slick({
+      arrows: false,
+      autoplay: true
+   });
  });

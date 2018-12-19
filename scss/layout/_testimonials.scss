@@ -1,0 +1,51 @@
+.testimonials {
+   min-height: 520px;
+   background: url('assets/images/mock/testimonials-bg.jpg');
+   background-size: cover;
+   @include flex(flex-start, center);
+   position: relative;
+   margin-bottom: 100px;
+
+   .container {
+      @include flex-column(center, center);
+   }
+
+   h2 {
+      color: white;
+      font-family: $script-font;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 20px;
+   }
+
+   img {
+      width: 25px;
+      margin-bottom: 20px;
+   }
+
+   .slide {
+      @include flex(center, center);
+   }
+
+   p {
+      color: #fff;
+      max-width: 660px;
+   }
+
+   span {
+      display: block;
+      margin-top: 20px;
+   }
+
+   .overlay {
+      @extend .is-cover;
+      background-color: rgb(0, 0, 0);
+      opacity: 0.6;
+   }
+
+   &-slider {
+      width: 100%;
+   }
+}
+
+ 
