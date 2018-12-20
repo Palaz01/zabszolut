@@ -15,6 +15,7 @@ get_header(); ?>
 		<?php while($loop->have_posts()) : $loop->the_post() ?>
 			<div class="slide">
 				<img src="<?php the_field('main_slider_image'); ?>" alt="">
+				<div class="overlay is-cover"></div>
 				<div class="main-slider-text">
 					<div class="container">
 						<h1><?php the_field('main_slider_title_1'); ?></h1>
@@ -45,7 +46,6 @@ get_header(); ?>
 						<p><?php the_field('home_about_description'); ?></p>
 						<a href="<?php the_field('home_about_link'); ?>" class="simple-link">
 							<span><?php the_field('home_about_link_text'); ?></span>
-							<img src="<?php bloginfo('template_directory'); ?>/assets/images/next.svg" alt="">
 						</a>
 						<img class="top-right-img" src="<?php bloginfo('template_directory'); ?>/assets/images/oat.jpg" alt="oat">
 					</div>
