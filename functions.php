@@ -160,10 +160,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Nav walker
 require_once('navwalker.php');
 register_nav_menus( array(
 	 'primary' => __( 'Primary Menu', 'menuname' ),
 	 'secondary' => __( 'Footer Menu', 'menuname' ),
 	 'bottom' => __( 'Bottom Footer Menu', 'menuname' )
 ) );
+
+// Remove auto p
+remove_filter( 'the_excerpt', 'wpautop' );
+
+// Post excerpt length, more link
+function get_excerpt(){
+	$excerpt = get_the_content();
+	$excerpt = preg_replace(" ([.*?])",'',$excerpt);
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, 120);
+	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+	$excerpt = trim(preg_replace( '/s+/', ' ', $excerpt));
+	$excerpt = $excerpt.'...<a class="simple-link" href="'. get_permalink($post->ID) . '">Részletek</a>';
+	return $excerpt;
+}
 

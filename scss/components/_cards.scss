@@ -1,6 +1,7 @@
 .event-card {
    @extend .card;
-
+   height: 100%;
+   
    &-img {
       @include size(225px, 200px);
       border-radius: 10px;
