@@ -184,3 +184,22 @@ function get_excerpt(){
 	return $excerpt;
 }
 
+// Add footer menu
+function wpb_custom_new_menu() {
+	register_nav_menus(
+	  array(
+		 'footer-menu' => __( 'Footer Menu' ),
+		 'footer-menu-2' => __( 'Footer Menu 2' )
+	  )
+	);
+ }
+ add_action( 'init', 'wpb_custom_new_menu' );
+
+ register_sidebar( array(
+	'name' => 'Footer Sidebar',
+	'id' => 'footer-sidebar',
+	'description' => 'Appears in the footer area',
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget' => '</aside>'
+) );
+

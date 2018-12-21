@@ -18,29 +18,18 @@
 			<div class="columns">
 				<div class="column">
 					<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-gray.png" alt="koelln logo">
-					<h4>Hun Trade Kft</h4>
-					<p>1139 Budapest, Váci út 85.</p>
-					<p>+36 1 353 19 52.</p>
-					<p>info@zabszolutegeszseges.hu</p>
+					<?php
+						if(is_active_sidebar('footer-sidebar')){
+						dynamic_sidebar('footer-sidebar');
+						}
+					?>
 				</div>
 				<div class="column is-flex">
-					<ul class="is-flex">
-						<li>
-							<a href="" target="_blank">Bemutatkozás</a>
-						</li>
-						<li>
-							<a href="" target="_blank">Termékek</a>
-						</li>
-						<li>
-							<a href="" target="_blank">Események</a>
-						</li>
-						<li>
-							<a href="" target="_blank">Receptek</a>
-						</li>
-						<li>
-							<a href="" target="_blank">Kapcsolat</a>
-						</li>
-					</ul>
+					<?php
+					wp_nav_menu( array( 
+						'theme_location' => 'footer-menu', 
+						'container_class' => '' ) ); 
+					?>
 				</div>
 			</div>
 		</div>
@@ -51,17 +40,11 @@
 						<p>Copyright © Huntrade Kft. - Minden jog fenntartva.</p>
 					</div>
 					<div class="column is-flex is-justifyend">
-						<ul>
-							<li>
-								<a href="#">Impresszum</a> 
-							</li>
-							<li>
-								<a href="#">jogi nyilatkozat</a>
-							</li>
-							<li>
-								<a href="#">Adatvédelmi szabályzat</a>
-							</li>
-						</ul>
+						<?php
+						wp_nav_menu( array( 
+							'theme_location' => 'footer-menu-2', 
+							'container_class' => '' ) ); 
+						?>
 					</div>
 				</div>
 			</div>
