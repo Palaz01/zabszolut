@@ -195,6 +195,8 @@ function wpb_custom_new_menu() {
  }
  add_action( 'init', 'wpb_custom_new_menu' );
 
+
+ // Footer widget
  register_sidebar( array(
 	'name' => 'Footer Sidebar',
 	'id' => 'footer-sidebar',
@@ -202,4 +204,10 @@ function wpb_custom_new_menu() {
 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 	'after_widget' => '</aside>'
 ) );
+
+
+// Custom image size
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'recipe-thumb', 404, 303, true ); //(cropped)
+}
 
