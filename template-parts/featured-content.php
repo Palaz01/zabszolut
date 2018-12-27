@@ -23,7 +23,7 @@
                   <div>
                      <span><?php the_date(); ?></span>
                      <h2><?php the_title(); ?></h2>
-                     <a href="#" class="simple-link">Részletek</a>
+                     <p><?php echo get_excerpt(); ?></p>
                   </div>
                </div>
             </div>					
