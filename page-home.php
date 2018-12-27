@@ -69,16 +69,34 @@ get_header(); ?>
 				<p><?php the_field('advantage_desc_2'); ?></p>
 			</div>
 			<div class="column is-flex is-justifycenter">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/health.jpg" alt="health">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/heart.jpg" alt="heart">
 			</div>
 		</div>
 		<div class="columns is-aligncenter">
 			<div class="column is-flex is-justifycenter">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/health2.jpg" alt="healthy">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/muesli.jpg" alt="muesli">
 			</div>
 			<div class="column">
 				<h2><?php the_field('advantage_title_3'); ?></h2>
 				<p><?php the_field('advantage_desc_3'); ?></p>
+			</div>
+		</div>
+		<div class="columns is-aligncenter">
+			<div class="column">
+				<h2><?php the_field('advantage_title_4'); ?></h2>
+				<p><?php the_field('advantage_desc_4'); ?></p>
+			</div>
+			<div class="column is-flex is-justifycenter">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cherry_oat.jpg" alt="cherry and oat">
+			</div>
+		</div>
+		<div class="columns is-aligncenter">
+			<div class="column is-flex is-justifycenter">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cookies.jpg" alt="muesli">
+			</div>
+			<div class="column">
+				<h2><?php the_field('advantage_title_5'); ?></h2>
+				<p><?php the_field('advantage_desc_5'); ?></p>
 			</div>
 		</div>
 	</div>	
@@ -122,7 +140,7 @@ get_header(); ?>
 					<div class="column is-flex is-justifycenter">
 						<div class="event-card-img">
 							<img src="<?php the_post_thumbnail(); ?>
-						</div>
+						</div> 
 					</div>
 					<div class="column is-flex is-aligncenter is-paddingless is-three-fifths">
 						<div class="card-content">
