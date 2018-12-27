@@ -62,14 +62,16 @@
             height: 100%;
          }
       }
+
       .slick-prev, .slick-next {
          z-index: 10;
-         top: calc(50% - 10px);
+         top: calc(50% - 40px);
    
          &:before {
             display: none;
          }
       }
+      
       .slick-prev {
          left: 20px;
          width: 30px;
@@ -85,7 +87,7 @@
       }
    
       .slick-dots {
-         bottom: 40px;
+         bottom: 80px;
          z-index: 1;
    
          li {
