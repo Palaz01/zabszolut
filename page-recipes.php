@@ -19,7 +19,7 @@ get_header(); ?>
                         <img src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
                      </div>
                      <div class="card-content">
-                        <a href="">
+                        <a href="<?php echo get_permalink(); ?>">
                            <h4 class="title is-size-4"><?php the_title(); ?></h4>
                         </a>
                      </div>
