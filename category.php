@@ -9,7 +9,8 @@ get_header(); ?>
                $args = array(
                'post_type' => 'products', 
                'category_name'  => $current_category
-               ); ?>
+               ); 
+            ?>
             <?php $loop = new WP_Query( $args ); ?>
                <?php if($loop->have_posts()) : ?>
                <?php while($loop->have_posts()) : $loop->the_post() ?>
