@@ -3,4 +3,19 @@
    font-weight: bold;
    text-transform: uppercase;
    font-size: 14px;
+
+   .navbar-dropdown {
+      border-radius: 0;
+      box-shadow: $deep-shadow;
+
+      .navbar-item {
+         padding-top: 15px;
+         padding-bottom: 15px;
+         
+         &:hover {
+            background: none;
+            color: $brand-color;
+         }
+      }
+   }
 }
