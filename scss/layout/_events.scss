@@ -1,16 +1,19 @@
 .events {
    margin-bottom: 70px;
+
    &-intro {
       margin-bottom: 60px;
    }
 
    .columns {
       margin-bottom: 20px;
-   } 
+   }
+   
+   .main-title {
+      margin-bottom: 30px;
+   }
 }
 
 .featured-event {
-   background: url('assets/images/featured_bg.jpg');
-   background-repeat: no-repeat;
-   background-position-x: 130px;
+   padding-bottom: 50px;
 }

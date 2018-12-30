@@ -1,10 +1,11 @@
-.featured-event-card {
+.featured-card {
    margin-bottom: 100px !important;
 
    &-content {
       margin-left: -150px;
       background: #fff;
       padding: 55px;
+      margin-bottom: 50px;
       box-shadow: $deep-shadow;
       border-radius: 10px;
       max-width: 540px;
@@ -13,12 +14,23 @@
          font-weight: bold;
          line-height: 1.2;
       }
+
+      .prep-time {
+         color: $dark-gray;
+         @include flex(flex-start, center);
+         margin-bottom: 10px;
+
+         img {
+            margin-right: 10px;
+         }
+      }
+
    }
    
    &-img {
       box-shadow: $deep-shadow; 
-      max-height: 500px;
-      width: 90%;
+      height: 500px;
+      width: 500px;
       border-radius: 10px;
       overflow: hidden;
 
@@ -28,4 +40,10 @@
          object-fit: cover;
       }
    }
+}
+
+.featured-event, .featured-recipe {
+   background: url('assets/images/featured_bg.jpg');
+   background-repeat: no-repeat;
+   background-position-x: 100px;
 }

@@ -210,4 +210,3 @@ function wpb_custom_new_menu() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'recipe-thumb', 404, 303, true ); //(cropped)
 }
-

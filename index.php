@@ -14,7 +14,9 @@
 
 get_header();
 ?>
-	<div class="events-page-content">
+<section class="section events-page-content">
+	<h2 class="has-text-centered main-title">Események</h2>
+	<div class="featured-event">
 		<?php
 		if ( have_posts() ) :
 			query_posts($query_string."&featured=yes");
@@ -40,34 +42,36 @@ get_header();
 
 		endif;
 		?>
-		<div class="container">
-			<div class="columns is-flex">				
-				<?php
-				if ( have_posts() ) :
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
+	</div>
 
-						/*
-						* Include the Post-Type-specific template for the content.
-						* If you want to override this in a child theme, then include a file
-						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						*/
-						get_template_part( 'template-parts/content', get_post_type() );
+	<div class="container">
+		<div class="columns is-flex">				
+			<?php
+			if ( have_posts() ) :
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-					endwhile;
-					wp_reset_query();
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
 
-					the_posts_navigation();
+				endwhile;
+				wp_reset_query();
 
-				else :
+				the_posts_navigation();
 
-					get_template_part( 'template-parts/content', 'none' );
+			else :
 
-				endif;
-				?>
-			</div>
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+			?>
 		</div>
 	</div>
+</section>
 <?php
 get_footer();
