@@ -31,7 +31,7 @@
 								<img class="brand-image" src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png"/>
 							</a>
 
-							<button class="button navbar-burger" data-target="primary-menu">
+							<button class="navbar-burger burger" data-target="primary-menu">
 								<span></span>
 								<span></span>
 								<span></span>
@@ -43,7 +43,7 @@
 							'theme_location'    => 'primary',
 							'depth'             => 2,
 							'container'         => false,
-							// 'items_wrap'     => 'div',
+							'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
 							'menu_class'        => 'navbar-end',
 							'after'             => "</div>",
 							'walker'            => new Navwalker())

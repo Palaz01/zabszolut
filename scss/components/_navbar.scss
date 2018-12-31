@@ -1,21 +1,54 @@
 .navbar-item {
-   padding: 0 20px;
+   padding-left: 20px;
+   padding-right: 20px;
    font-weight: bold;
    text-transform: uppercase;
    font-size: 14px;
 
+      &.has-dropdown {
+         .navbar-dropdown {
+               display: none;
+         }
+         .navbar-dropdown.is-active {
+            display: block;
+         }
+    
+     }
+
+   .navbar-link {
+      @include until($desktop) {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      
+   }
+
    .navbar-dropdown {
       border-radius: 0;
       box-shadow: $deep-shadow;
+      display: none;
 
       .navbar-item {
          padding-top: 15px;
          padding-bottom: 15px;
+
+         @include until($desktop) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-transform: capitalize;
+            font-weight: normal;
+         }
          
          &:hover {
             background: none;
             color: $brand-color;
          }
+      }
+
+      @include until($desktop) {
+         box-shadow: none;
+         border-top: $light-border;
+         border-bottom: $light-border;
       }
    }
 }

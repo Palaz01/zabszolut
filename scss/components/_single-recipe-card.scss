@@ -20,7 +20,7 @@
       
       .top-item {
          @include flex(center, center);
-         border-bottom: 1px solid rgb(235, 235, 235);
+         border-bottom: $light-border;
          width: 50%;
          height: 110px;
          position: relative;
