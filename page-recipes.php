@@ -7,7 +7,7 @@
 get_header(); ?>
 
 <section class="section recipes-page-content">
-   <h2 class="has-text-centered main-title">Receptek</h2>
+   <h1 class="has-text-centered main-title">Receptek</h1>
    <div class="featured-recipe">
       <?php
       if ( have_posts() ) :

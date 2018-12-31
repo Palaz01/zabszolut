@@ -21,3 +21,18 @@
       height: 5px;
    }
 }
+
+.single-recipe {
+   .preparation {
+      max-width: 960px;
+      margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .more-recipes {
+      .columns {
+         margin-bottom: 45px;
+      }
+   }
+}

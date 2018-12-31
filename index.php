@@ -15,7 +15,7 @@
 get_header();
 ?>
 <section class="section events-page-content">
-	<h2 class="has-text-centered main-title">Események</h2>
+	<h1 class="has-text-centered main-title">Események</h1>
 	<div class="featured-event">
 		<?php
 		if ( have_posts() ) :

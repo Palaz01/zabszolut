@@ -1,0 +1,78 @@
+.single-recipe-card {
+   margin-bottom: 65px !important;
+
+   &-img {
+      @extend .featured-card-img;
+   }
+
+   &-content {
+      @extend .featured-card-content;
+      padding: 0 !important;
+      max-width: 100% !important;
+      margin-bottom: 0 !important;
+      margin-top: 50px;
+      width: 740px;
+      
+      img {
+         width: 40px;
+         margin-right: 20px;
+      }
+      
+      .top-item {
+         @include flex(center, center);
+         border-bottom: 1px solid rgb(235, 235, 235);
+         width: 50%;
+         height: 110px;
+         position: relative;
+
+         p {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            white-space: nowrap;
+         }
+
+         span {
+            color:  $dark-gray;
+            font-weight: bold;
+         }
+
+         &:first-child {
+            &:after {
+               content: '';
+               height: 32px;
+               width: 1px;
+               background: rgb(235, 235, 235);
+               position: absolute;
+               right: 0;
+               top: calc(50% - 16px);
+            }
+         }
+      }
+
+      .ingredients {
+         padding: 30px 50px;
+
+         ul {
+            width: 100%;
+
+            li {
+               width: 50%;
+               display: inline;
+               float: left;
+               padding: 10px 20px;
+
+               &:before {
+                  content: "\2022";
+                  color: $brand-color;
+                  font-weight: bold;
+                  display: inline-block; 
+                  width: 1em;
+                  margin-left: -1em;
+               }               
+            }
+         }
+      }
+   }
+}
+ 

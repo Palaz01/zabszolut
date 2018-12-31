@@ -10,7 +10,7 @@
 ?>
 <section class="section single-content">
    <div class="container">
-      <h2 class="has-text-centered"><?php the_title(); ?></h2>
+      <h1 class="has-text-centered"><?php the_title(); ?></h1>
       <hr>
       <span class="has-text-centered"><?php the_date(); ?></span>
       <img src="<?php the_post_thumbnail(); ?>    
