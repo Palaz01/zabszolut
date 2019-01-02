@@ -33,11 +33,11 @@ get_header(); ?>
 	</div>	
 </section>
 
-<section class="introduction">
+<section class="introduction section">
 	<div class="container">
 		<div class="card">
 			<div class="columns is-marginless">
-				<div class="column is-paddingless">
+				<div class="column is-paddingless is-hidden-touch">
 					<img class="introduction-image" src="<?php the_field('home_about_img'); ?>" alt="oatfield">
 				</div>
 				<div class="column introduction-content">
@@ -55,7 +55,7 @@ get_header(); ?>
 	</div>	
 </section>
 
-<section class="advantages">
+<section class="advantages section">
 	<div class="container">
 		<div class="columns">
 			<div class="column is-three-fifths is-offset-one-fifth">
@@ -63,17 +63,17 @@ get_header(); ?>
 				<p class="has-text-centered"><?php the_field('advantage_desc_1'); ?></p>
 			</div>
 		</div>
-		<div class="columns is-aligncenter">
+		<div class="columns is-aligncenter reverse-on-small">
 			<div class="column">
 				<h2><?php the_field('advantage_title_2'); ?></h2>
 				<p><?php the_field('advantage_desc_2'); ?></p>
 			</div>
-			<div class="column is-flex is-justifycenter">
+			<div class="column advantages-img">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/heart.jpg" alt="heart">
 			</div>
 		</div>
 		<div class="columns is-aligncenter">
-			<div class="column is-flex is-justifycenter">
+			<div class="column advantages-img">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/muesli.jpg" alt="muesli">
 			</div>
 			<div class="column">
@@ -81,17 +81,17 @@ get_header(); ?>
 				<p><?php the_field('advantage_desc_3'); ?></p>
 			</div>
 		</div>
-		<div class="columns is-aligncenter">
+		<div class="columns is-aligncenter reverse-on-small">
 			<div class="column">
 				<h2><?php the_field('advantage_title_4'); ?></h2>
 				<p><?php the_field('advantage_desc_4'); ?></p>
 			</div>
-			<div class="column is-flex is-justifycenter">
+			<div class="column advantages-img">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cherry_oat.jpg" alt="cherry and oat">
 			</div>
 		</div>
 		<div class="columns is-aligncenter">
-			<div class="column is-flex is-justifycenter">
+			<div class="column advantages-img">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cookies.jpg" alt="muesli">
 			</div>
 			<div class="column">
@@ -102,7 +102,7 @@ get_header(); ?>
 	</div>	
 </section>
 
-<section class="testimonials">
+<section class="testimonials section">
 	<div class="overlay"></div>
 	<div class="container">
 		<h2 class="has-text-centered"><?php the_field('testimonials_title'); ?></h2>
@@ -123,7 +123,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="events">
+<section class="events section">
 	<div class="container">
 		<div class="columns">
 			<div class="column is-three-fifths is-offset-one-fifth events-intro">
@@ -131,11 +131,11 @@ get_header(); ?>
 				<p class="has-text-centered"><?php the_field('main_page_events_desc'); ?></p>
 			</div>
 		</div>
-		<div class="columns is-flex">
+		<div class="columns is-multiline">
 			<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
  
  			<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-			<div class="column">
+			<div class="column is-flex is-justifycenter is-full-tablet is-half-fullhd mg-small">
 				<div class="event-card columns">	
 					<div class="column is-flex is-justifycenter">
 						<div class="event-card-img">

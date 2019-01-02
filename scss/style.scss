@@ -1,7 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/custom-bulma';
 @import 'abstracts/mixins';
-@import 'abstracts/helpers';
 @import 'vendors/bulma/utilities/all';
 @import 'vendors/bulma/base/all';
 @import 'vendors/bulma/components/all';
@@ -10,6 +9,7 @@
 @import 'vendors/bulma/layout/all';
 @import 'vendors/slick/slick';
 @import 'vendors/slick/slick-theme';
+@import 'abstracts/helpers';
 @import 'base/typo';
 @import 'base/resets';
 @import 'components/navbar';

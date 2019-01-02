@@ -1,15 +1,20 @@
 .main-slider {
    width: 100%;
    height: 760px;
-   margin-bottom: 70px;
+   margin-bottom: 30px;
+   position: relative;
 
    .curly {
       position: absolute;
-      bottom: 70px;
+      bottom: -1%;
       width: 100%;
 
       img {
          width: 100%;
+      }
+
+      @include until($tablet) {
+         bottom: -2%;
       }
    }
 
@@ -24,6 +29,11 @@
          font-family: $script-font;
          font-size: 50px;
          text-shadow: 1.147px 1.638px 5px rgba(24, 23, 23, 0.17);
+
+         @include until($tablet) {
+            font-size: 30px;
+            text-align: center;
+         }
       }
 
       h2 {
@@ -31,6 +41,15 @@
          font-size: 40px;
          margin-bottom: 30px;
          text-shadow: 1.147px 1.638px 5px rgba(24, 23, 23, 0.17);
+
+         @include until($tablet) {
+            font-size: 25px;
+            text-align: center;
+         }
+      }
+
+      @include until($desktop) {
+         display: flex;
       }
    }
 
@@ -66,16 +85,21 @@
       .slick-prev, .slick-next {
          z-index: 10;
          top: calc(50% - 40px);
+         width: 30px;
    
          &:before {
             display: none;
+         }
+
+         @include until($tablet) {
+            top: 50%;
+            width: 20px;
          }
       }
       
       .slick-prev {
          left: 20px;
-         width: 30px;
-   
+         
          img {
             transform: rotate(180deg);
          }
@@ -83,11 +107,10 @@
    
       .slick-next {
          right: 20px;
-         width: 30px;
       }
    
       .slick-dots {
-         bottom: 80px;
+         bottom: 100px;
          z-index: 1;
    
          li {
@@ -99,7 +122,15 @@
                line-height: 10px;
             }
          }
+
+         @include until($tablet) {
+            bottom: 30px;
+         }
       }
+   }
+
+   @include until($tablet) {
+      height: 400px;
    }
 }
 

@@ -12,6 +12,17 @@
    .main-title {
       margin-bottom: 30px;
    }
+
+   .mg-small {
+      
+      @include until($fullhd) {
+         margin-bottom: 25px;
+      }
+
+      @include until($tablet) {
+         margin-bottom: 0;
+      } 
+   }
 }
 
 .featured-event {
