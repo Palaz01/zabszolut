@@ -4,7 +4,7 @@
    &-img {
       @extend .featured-card-img;
       
-      @include until($tablet) {
+      @include until($desktop) {
          width: 100% !important;
       }
    }
@@ -82,13 +82,17 @@
             }
          }
 
-         @include until($desktop) {
+         @include until($tablet) {
             padding-left: 10px;
             padding-right: 10px;
          }
       }
 
       @include until($desktop) {
+         width: 100%;
+      }
+
+      @include until($widescreen) {
          margin-top: 20px;
       }
    }

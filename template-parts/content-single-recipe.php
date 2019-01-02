@@ -12,7 +12,7 @@
    <h1 class="has-text-centered"><?php the_title(); ?></h1>
    <div class="container">
   
-      <div class="single-recipe-card columns">	
+      <div class="single-recipe-card columns is-desktop">	
          <div class="column is-flex is-justifyend">
             <div class="single-recipe-card-img">
                <img src="<?php the_post_thumbnail(); ?>

@@ -43,12 +43,12 @@
          object-fit: cover;
       }
 
-      @include until($desktop) {
+      @include until($widescreen) {
          @include size(400px, 400px);
       }
    }
 
-   @include until($desktop) {
+   @include until($fullhd) {
       margin-bottom: 50px !important;
    }
 }
