@@ -61,8 +61,8 @@
             <?php $loop = new WP_Query( array('post_type' => 'recipe', 'posts_per_page' => 3 )); ?>
                <?php if($loop->have_posts()) : ?>
                <?php while($loop->have_posts()) : $loop->the_post() ?>
-                  <div class="column is-one-third">
-                     <div class="recipe-list-item">                  
+                  <div class="column is-half-tablet is-one-third-desktop">
+                     <div class="recipe-list-item">                   
                         <?php $recipe_img = get_field('recipe_img'); ?>
                         <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
                         <div class="recipe-list-item-content">

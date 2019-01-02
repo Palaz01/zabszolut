@@ -90,6 +90,7 @@
 
       @include until($desktop) {
          width: 100%;
+         margin-left: 0 !important;
       }
 
       @include until($widescreen) {

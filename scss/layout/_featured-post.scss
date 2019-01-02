@@ -24,10 +24,6 @@
             margin-right: 10px;
          }
       }
-
-      @include until($desktop) {
-         margin-left: 0;
-      }
    }
    
    &-img {
