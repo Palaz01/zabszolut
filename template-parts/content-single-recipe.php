@@ -11,46 +11,46 @@
 <section class="section single-recipe">
    <h1 class="has-text-centered"><?php the_title(); ?></h1>
    <div class="container">
-      <div class="column">
-         <div class="single-recipe-card columns is-flex">	
-            <div class="column is-flex is-justifyend">
-               <div class="single-recipe-card-img">
-                  <img src="<?php the_post_thumbnail(); ?>
-               </div>
+  
+      <div class="single-recipe-card columns">	
+         <div class="column is-flex is-justifyend">
+            <div class="single-recipe-card-img">
+               <img src="<?php the_post_thumbnail(); ?>
             </div>
-            <div class="column is-flex is-aligncenter">
-               <div class="single-recipe-card-content">
-                  <div>
-                     <div class="is-flex is-aligncenter">            
-                        <?php if( get_field('preparation_time') ): ?>
-                           <div class="top-item">
-                              <img src="<?php bloginfo('template_directory'); ?>/assets/images/clock-gray.svg" alt="clock">
-                              <div>
-                                 <p>Elkészítési idő</p>
-                                 <span><?php the_field('preparation_time'); ?></span>
-                              </div>
-                           </div>
-                        <?php endif; ?>
-                            
+         </div>
+         <div class="column is-flex is-aligncenter">
+            <div class="single-recipe-card-content">
+               <div>
+                  <div class="is-flex is-aligncenter">            
+                     <?php if( get_field('preparation_time') ): ?>
                         <div class="top-item">
-                           <img src="<?php bloginfo('template_directory'); ?>/assets/images/bowl.svg" alt="clock">
+                           <img src="<?php bloginfo('template_directory'); ?>/assets/images/clock-gray.svg" alt="clock">
                            <div>
-                              <p>Mennyiség</p>
-                              <span>4 adag</span>
+                              <p>Elkészítési idő</p>
+                              <span><?php the_field('preparation_time'); ?></span>
                            </div>
-                        </div>               
-                 
-                     </div>                     
-                     <div class="ingredients">
-                        <h2>Hozzávalók</h2>
-                        <?php the_field('ingredients_text'); ?>
-                        <div class="clear-both"></div>
-                     </div>
+                        </div>
+                     <?php endif; ?>
+                           
+                     <div class="top-item">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/bowl.svg" alt="clock">
+                        <div>
+                           <p>Mennyiség</p>
+                           <span>4 adag</span>
+                        </div>
+                     </div>               
+               
+                  </div>                     
+                  <div class="ingredients">
+                     <h2>Hozzávalók</h2>
+                     <?php the_field('ingredients_text'); ?>
+                     <div class="clear-both"></div>
                   </div>
                </div>
-            </div>					
-         </div>
+            </div>
+         </div>					
       </div>
+
       <div class="preparation">
          <h2>Elkészítés</h2>
          <p><?php the_field('preparation_text'); ?></p>

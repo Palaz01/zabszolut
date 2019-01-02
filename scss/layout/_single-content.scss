@@ -35,4 +35,10 @@
          margin-bottom: 45px;
       }
    }
+
+   @include until($desktop) {
+      h2 {
+         text-align: center;
+      }
+   }
 }

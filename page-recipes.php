@@ -8,7 +8,7 @@ get_header(); ?>
 
 <section class="section recipes-page-content">
    <h1 class="has-text-centered main-title">Receptek</h1>
-   <div class="featured-recipe">
+   <div class="featured-recipe is-hidden-mobile">
       <?php
       if ( have_posts() ) :
          query_posts('post_type=recipe&featured=yes');
@@ -38,7 +38,7 @@ get_header(); ?>
          <?php $loop = new WP_Query( array('post_type' => 'recipe', )); ?>
             <?php if($loop->have_posts()) : ?>
             <?php while($loop->have_posts()) : $loop->the_post() ?>
-               <div class="column is-one-third">
+               <div class="column is-half-tablet is-one-third-desktop">
                   <div class="recipe-list-item">                  
                      <?php $recipe_img = get_field('recipe_img'); ?>
                      <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">

@@ -2,7 +2,7 @@
    margin-bottom: 100px !important;
 
    &-content {
-      margin-left: -150px;
+      margin-left: -65px;
       background: #fff;
       padding: 55px;
       margin-bottom: 50px;
@@ -25,6 +25,9 @@
          }
       }
 
+      @include until($desktop) {
+         margin-left: 0;
+      }
    }
    
    &-img {
@@ -39,11 +42,26 @@
          height: 100%; 
          object-fit: cover;
       }
+
+      @include until($desktop) {
+         @include size(400px, 400px);
+      }
+   }
+
+   @include until($desktop) {
+      margin-bottom: 50px !important;
    }
 }
 
 .featured-event, .featured-recipe {
    background: url('assets/images/featured_bg.jpg');
    background-repeat: no-repeat;
-   background-position-x: 100px;
+   background-size: contain;
+   max-width: 1490px;
+   margin-left: auto;
+   margin-right: auto;
+
+   @include until($fullhd) {
+      background: none;
+   }
 }

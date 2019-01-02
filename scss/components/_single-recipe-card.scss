@@ -3,6 +3,10 @@
 
    &-img {
       @extend .featured-card-img;
+      
+      @include until($tablet) {
+         width: 100% !important;
+      }
    }
 
    &-content {
@@ -69,9 +73,23 @@
                   display: inline-block; 
                   width: 1em;
                   margin-left: -1em;
-               }               
+               }
+               
+               @include until($desktop) {
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+               }
             }
          }
+
+         @include until($desktop) {
+            padding-left: 10px;
+            padding-right: 10px;
+         }
+      }
+
+      @include until($desktop) {
+         margin-top: 20px;
       }
    }
 }

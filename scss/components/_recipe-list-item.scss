@@ -1,6 +1,5 @@
 .recipe-list-item {
-   width: 400px;
-   height: 400px;
+   @include size(100%, 400px);
    border-radius: 5px;
    position: relative;
    overflow: hidden;
@@ -29,5 +28,9 @@
          color: #fff;
          @include flex(flex-start, center);
       }
+   }
+
+   @include until($fullhd) {
+      height: 340px;
    }
 }

@@ -8,4 +8,8 @@
    .featured-recipe {
       padding-bottom: 50px;
    }
+
+   @include from($desktop) {
+      background: none;
+   }
 }
