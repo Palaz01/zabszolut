@@ -1,0 +1,54 @@
+.products-page-content {
+   & > .container {
+      background: url('assets/images/oats.png');
+      background-size: 100% auto;
+
+      @include until($tablet) {
+         background: none;
+      }
+   }
+}
+
+.product-item {
+   align-items: center;
+
+   .card {
+      max-height: 300px;
+      padding: 55px 65px;
+
+      @include until($tablet) {
+         box-shadow: none;
+         padding: 20px 20px 55px 20px;
+      }
+   }
+
+   &:nth-of-type(even) {
+      flex-direction: row-reverse;
+   }
+
+   &-img {
+      padding-left: 12%;
+      padding-right: 12%;
+
+      @include until($tablet) {
+         padding-left: 20%;
+         padding-right: 20%;
+      }
+   }
+
+   @include until($tablet) {
+      h4 {
+         text-align: center;
+      }
+   }
+}
+
+.products-page-hero {
+   background: url('assets/images/koelln.jpg');
+   background-size: cover;
+   position: relative;
+
+   .hero-subtitle {
+      text-transform: uppercase;
+   }
+}

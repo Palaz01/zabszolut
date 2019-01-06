@@ -37,4 +37,27 @@ h2 {
 .title {
    margin-bottom: 20px;
 }
+
+.hero-title {
+   font-family: $script-font;
+   font-size: 50px;
+   text-shadow: 1.147px 1.638px 5px rgba(24, 23, 23, 0.17);
+   
+   @include until($tablet) {
+      font-size: 30px;
+      text-align: center;
+   }
+}
+
+.hero-subtitle {
+   font-weight: 800;
+   font-size: 40px;
+   margin-bottom: 30px;
+   text-shadow: 1.147px 1.638px 5px rgba(24, 23, 23, 0.17);
+
+   @include until($tablet) {
+      font-size: 25px;
+      text-align: center;
+   }
+}
  
