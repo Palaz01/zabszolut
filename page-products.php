@@ -17,10 +17,11 @@ get_header(); ?>
       </div>
    </div>
    <section class="products-page-content section">
-      <div class="container">
-         <?php $loop = new WP_Query( array('post_type' => 'products', )); ?>
-            <?php if($loop->have_posts()) : ?>
-            <?php while($loop->have_posts()) : $loop->the_post() ?> 
+      <div class="container post-list">
+         <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+         $loop = new WP_Query( array('post_type' => 'products',  'paged' => $paged, 'posts_per_page'=> 6 ));
+         if($loop->have_posts()) :
+            while($loop->have_posts()) : $loop->the_post() ?> 
                <div class="columns product-item is-multiline is-three-quarters is-flex">
                   <div class="column is-full-mobile product-item-img">
                      <img src="<?php the_post_thumbnail(); ?>
@@ -30,8 +31,11 @@ get_header(); ?>
                      <p><?php echo get_excerpt(); ?></p>
                   </div>
                </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+            <?php endwhile;
+         endif; ?> 
+      </div>
+      <div class="is-flex is-justifycenter">
+         <?php load_more_button(); ?>
          <?php wp_reset_query(); ?> 
       </div>
    </section>

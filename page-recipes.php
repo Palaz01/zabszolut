@@ -34,10 +34,11 @@ get_header(); ?>
    </div>
 
    <div class="container">
-      <div class="columns is-multiline">
-         <?php $loop = new WP_Query( array('post_type' => 'recipe', )); ?>
-            <?php if($loop->have_posts()) : ?>
-            <?php while($loop->have_posts()) : $loop->the_post() ?>
+      <div class="columns is-multiline post-list">
+         <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+         $loop = new WP_Query( array('post_type' => 'recipe', 'paged' => $paged, 'posts_per_page'=> 9 ));
+         if($loop->have_posts()) :
+            while($loop->have_posts()) : $loop->the_post() ?>
                <div class="column is-half-tablet is-one-third-desktop">
                   <div class="recipe-list-item">                  
                      <?php $recipe_img = get_field('recipe_img'); ?>
@@ -55,10 +56,13 @@ get_header(); ?>
                      </div>
                   </div>               
                </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-         <?php wp_reset_query(); ?>   
+            <?php endwhile;
+         endif; ?>                    
       </div>
+      <div class="is-flex is-justifycenter">
+         <?php load_more_button(); ?>
+         <?php wp_reset_query(); ?> 
+      </div>     
    </div>
 </section>
 

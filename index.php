@@ -45,7 +45,7 @@ get_header();
 	</div>
 
 	<div class="container">
-		<div class="columns is-flex">				
+		<div class="columns is-flex post-list">				
 			<?php
 			if ( have_posts() ) :
 				/* Start the Loop */
@@ -70,6 +70,9 @@ get_header();
 
 			endif;
 			?>
+		</div>
+		<div class="is-flex is-justifycenter">
+			<?php load_more_button(); ?>
 		</div>
 	</div>
 </section>
