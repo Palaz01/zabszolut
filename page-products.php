@@ -19,9 +19,9 @@ get_header(); ?>
    <section class="products-page-content section">
       <div class="container post-list">
          <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-         $loop = new WP_Query( array('post_type' => 'products',  'paged' => $paged, 'posts_per_page'=> 6 ));
-         if($loop->have_posts()) :
-            while($loop->have_posts()) : $loop->the_post() ?> 
+         $wp_query = new WP_Query( array('post_type' => 'products',  'paged' => $paged, 'posts_per_page'=> 6 ));
+         if($wp_query->have_posts()) :
+            while($wp_query->have_posts()) : $wp_query->the_post() ?> 
                <div class="columns product-item is-multiline is-three-quarters is-flex">
                   <div class="column is-full-mobile product-item-img">
                      <img src="<?php the_post_thumbnail(); ?>
@@ -35,8 +35,10 @@ get_header(); ?>
          endif; ?> 
       </div>
       <div class="is-flex is-justifycenter">
-         <?php load_more_button(); ?>
-         <?php wp_reset_query(); ?> 
+         <?php if ( $wp_query->max_num_pages > 1 ) :
+            load_more_button();
+         endif;
+         wp_reset_query(); ?> 
       </div>
    </section>
 <?php get_footer(); ?>
