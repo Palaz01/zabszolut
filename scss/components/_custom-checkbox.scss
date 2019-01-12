@@ -1,0 +1,22 @@
+input[type="checkbox"] {
+   position: relative;
+   margin-right: 5px;
+
+   &:before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      border: 1px solid $light-gray;
+      background: #fff;
+      position: absolute;
+      top: -2px;
+      left: 0;
+   }
+
+   &:checked {
+      &:before {
+         background: url('assets/images/checked.png');
+         border-color: $brand-color;
+      }
+   }
+}
