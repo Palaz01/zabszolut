@@ -1,0 +1,66 @@
+.single-product {
+   background: url('assets/images/oat-heart-fruit.png');
+   background-repeat: no-repeat;
+   background-position-x: 85%;
+
+   h2 {
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 80px;
+   }
+   .columns {
+      .column:nth-child(1) {
+         padding-right: 5%;
+
+         @include until($desktop) {
+            padding: 0;
+         }
+
+         @include until($desktop) {
+            @include flex(center, center);
+
+            img {
+               width: 50%;
+               margin-left: auto;
+               margin-right: auto;
+            }
+         }
+      }
+
+      .single-product-content {
+         background: #fff;
+         box-shadow: $deep-shadow;
+         padding: 50px;
+         max-width: 80%;
+
+         table {
+            width: 100%;
+            margin-bottom: 30px;
+
+            tr {
+               td {
+                  padding: 5px;
+               }
+            }
+         }
+
+         p {
+            margin-bottom: 10px;
+            color: $light-gray;
+            line-height: 1.7;
+         }
+
+         strong {
+            color: $dark-gray;
+         }
+
+         @include until($widescreen) {
+            max-width: 100%;
+         }
+      }
+   }
+
+   @include until($widescreen) {
+      background: none;
+   }
+}

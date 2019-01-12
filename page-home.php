@@ -18,7 +18,7 @@ get_header(); ?>
 				<div class="overlay is-cover"></div>
 				<div class="main-slider-text">
 					<div class="container">
-						<h1 class="hero-title"><?php the_field('main_slider_title_1'); ?></h1>
+						<h1 class="script-title"><?php the_field('main_slider_title_1'); ?></h1>
 						<h2 class="hero-subtitle"><?php the_field('main_slider_title_2'); ?></h2>
 						<a href="<?php the_field('main_slider_link'); ?>" class="button is-primary is-rounded"><?php the_field('main_slider_button_title'); ?></a>
 					</div>
