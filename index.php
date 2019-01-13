@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<section class="section events-page-content">
+<section class="section events">
 	<h1 class="has-text-centered main-title">Események</h1>
 	<div class="featured-event">
 		<?php
@@ -45,7 +45,7 @@ get_header();
 	</div>
 
 	<div class="container">
-		<div class="columns is-flex post-list">				
+		<div class="columns events-list post-list is-multiline">				
 			<?php
 			if ( have_posts() ) :
 				/* Start the Loop */

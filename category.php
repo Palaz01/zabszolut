@@ -13,9 +13,6 @@ get_header(); ?>
             </h2>
          </div>
       </div>
-      <div class="curly">
-         <img src="<?php bloginfo('template_directory'); ?>/assets/images/curly.svg" alt="">
-      </div>
    </div>
    <section class="products-page-content section">
       <div class="container">

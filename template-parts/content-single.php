@@ -18,25 +18,27 @@
    </div>
 </section>
 
-<section class="section">
+<section class="section events">
    <div class="container">
-      <div class="columns is-flex">
+      <div class="columns is-multiline post-list events-list">
          <?php $the_query = new WP_Query( 'posts_per_page=2' ); ?>
          <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-            <div class="column">
-               <div class="event-card columns">	
-                  <div class="column is-flex is-justifycenter">
-                     <div class="event-card-img">
-                        <img src="<?php the_post_thumbnail(); ?>
-                     </div> 
-                  </div>
-                  <div class="column is-flex is-aligncenter is-paddingless is-three-fifths">
-                     <div class="card-content">
-                        <div>
-                           <span><?php the_date(); ?></span>
-                           <h4 class="title is-size-4"><?php the_title(); ?></h4>
+            <div class="column is-full-tablet is-half-desktop">
+               <div class="event-card">
+                  <div class="columns">	
+                     <div class="column is-flex is-justifycenter">
+                        <div class="event-card-img">
+                           <img src="<?php the_post_thumbnail(); ?>
+                        </div> 
+                     </div>
+                     <div class="column is-flex is-aligncenter is-paddingless is-three-fifths">
+                        <div class="card-content">
+                           <div>
+                              <span><?php the_date(); ?></span>
+                              <h4 class="title is-size-4"><?php the_title(); ?></h4>
+                           </div>
+                           <p><?php echo get_excerpt(); ?></p>
                         </div>
-                        <p><?php echo get_excerpt(); ?></p>
                      </div>
                   </div>					
                </div>
