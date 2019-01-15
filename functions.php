@@ -120,15 +120,20 @@ add_action( 'widgets_init', 'zabszolut_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zabszolut_scripts() {
+
 	wp_enqueue_style( 'zabszolut-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/animate.css' );
 
 	wp_enqueue_script( 'zabszolut-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'zabszolut-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'zabszolut-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'zabszolut-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '', true );
 
-	wp_enqueue_script( 'zabszolut-main-js', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
+	wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array(), '', true );
+
+	wp_enqueue_script( 'zabszolut-main-js', get_template_directory_uri() . '/js/main.js', array(), '', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'zabszolut_scripts' );
@@ -179,7 +184,6 @@ function get_excerpt(){
 	$excerpt = strip_tags($excerpt);
 	$excerpt = substr($excerpt, 0, 120);
 	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-	$excerpt = trim(preg_replace( '/s+/', ' ', $excerpt));
 	$excerpt = $excerpt.'...<a class="simple-link" href="'. get_permalink($post->ID) . '">Részletek</a>';
 	return $excerpt;
 }

@@ -68,12 +68,12 @@ get_header(); ?>
 				<h2><?php the_field('advantage_title_2'); ?></h2>
 				<p><?php the_field('advantage_desc_2'); ?></p>
 			</div>
-			<div class="column advantages-img">
+			<div class="column advantages-img wow slideInRight" data-wow-offset="500">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/heart.jpg" alt="heart">
 			</div>
 		</div>
 		<div class="columns is-aligncenter">
-			<div class="column advantages-img">
+			<div class="column advantages-img wow slideInLeft" data-wow-offset="500">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/muesli.jpg" alt="muesli">
 			</div>
 			<div class="column">
@@ -81,17 +81,17 @@ get_header(); ?>
 				<p><?php the_field('advantage_desc_3'); ?></p>
 			</div>
 		</div>
-		<div class="columns is-aligncenter reverse-on-small">
+		<div class="columns is-aligncenter reverse-on-small" data-wow-offset="500">
 			<div class="column">
 				<h2><?php the_field('advantage_title_4'); ?></h2>
 				<p><?php the_field('advantage_desc_4'); ?></p>
 			</div>
-			<div class="column advantages-img">
+			<div class="column advantages-img wow slideInRight" data-wow-offset="500">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cherry_oat.jpg" alt="cherry and oat">
 			</div>
 		</div>
 		<div class="columns is-aligncenter">
-			<div class="column advantages-img">
+			<div class="column advantages-img wow slideInLeft" data-wow-offset="500">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/images/advantages/cookies.jpg" alt="muesli">
 			</div>
 			<div class="column">
