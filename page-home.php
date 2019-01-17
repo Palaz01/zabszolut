@@ -29,7 +29,9 @@ get_header(); ?>
 		<?php wp_reset_query(); ?>
 	</div>
 	<div class="curly">
-		<img src="<?php bloginfo('template_directory'); ?>/assets/images/curly.svg" alt="">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 90"><style type="text/css">  
+			.st0{fill:#FFFFFF;}
+		</style><path class="st0" d="M500.5 46C288.5 46 102.7 37.2 0 24.1V90h1000V24.2C897.1 37.3 711.9 46 500.5 46z"/></svg>
 	</div>	
 </section>
 
@@ -106,7 +108,7 @@ get_header(); ?>
 	<div class="overlay"></div>
 	<div class="container">
 		<h2 class="has-text-centered"><?php the_field('testimonials_title'); ?></h2>
-		<img src="<?php bloginfo('template_directory'); ?>/assets/images/quotations.svg" alt="">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.2 255.2" width="30" height="40"><style>.a{fill:#FFF;}</style><path d="M76.5 28l-7.4-5.2 -0.3-0.2 -0.5-0.2 -5.4-2.6 0.2 0.4c-5.1-2.1-10.5-3.6-16.3-3.6C20.9 16.6 0 38.3 0 65.2s21 48.6 46.8 48.6c8.3 0 16-2.4 22.7-6.4 -2.3 26-15.4 63.9-63.4 102.6 -6.7 5.4-7.9 15.4-2.7 22.4 3.1 4.1 7.6 6.2 12.2 6.2 3.3 0 6.6-1.1 9.4-3.3 58.9-47.5 73.6-96.4 75.6-129 3.4-41.7-9.3-63.6-20.8-75.1L76.5 28z" class="a"/><path d="M233.8 31.3l-3.2-3.3 -7.4-5.2 -0.3-0.2 -0.5-0.2 -5.4-2.6 0.2 0.4c-5.1-2.1-10.5-3.6-16.4-3.6 -25.8 0-46.8 21.8-46.8 48.6s20.9 48.6 46.8 48.6c8.3 0 16-2.4 22.7-6.4 -2.3 26-15.4 63.9-63.4 102.6 -6.7 5.4-7.9 15.4-2.7 22.4 3.1 4.1 7.6 6.2 12.2 6.2 3.3 0 6.6-1.1 9.4-3.3 58.9-47.5 73.6-96.4 75.6-129C258 64.7 245.4 42.7 233.8 31.3z" class="a"/></svg>
 		<div class="testimonials-slider">
 			<?php
 			$loop = new WP_Query( array('post_type' => 'testimonials', ));
@@ -140,7 +142,7 @@ get_header(); ?>
 					<div class="columns">						
 						<div class="column is-flex is-justifycenter">
 							<div class="event-card-img">
-								<img src="<?php the_post_thumbnail(); ?>
+								<?php the_post_thumbnail('event-thumb'); ?>
 							</div> 
 						</div>
 						<div class="column is-flex is-aligncenter is-paddingless is-three-fifths">

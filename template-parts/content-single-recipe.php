@@ -15,7 +15,7 @@
       <div class="single-recipe-card columns is-desktop">	
          <div class="column is-flex is-justifyend">
             <div class="single-recipe-card-img">
-               <img src="<?php the_post_thumbnail(); ?>
+               <?php the_post_thumbnail(); ?>
             </div>
          </div>
          <div class="column is-flex is-aligncenter">
@@ -57,13 +57,20 @@
       </div>
       <div class="container more-recipes">
          <h2 class="has-text-centered">További receptek</h2>
-         <div class="columns is-multiline">
+         <div class="columns is-multiline"> 
             <?php $loop = new WP_Query( array('post_type' => 'recipe', 'posts_per_page' => 3 )); ?>
                <?php if($loop->have_posts()) : ?>
                <?php while($loop->have_posts()) : $loop->the_post() ?>
                   <div class="column is-half-tablet is-one-third-desktop">
                      <div class="recipe-list-item">                   
-                        <?php $recipe_img = get_field('recipe_img'); ?>
+                        <?php 
+                        $image = get_field('recipe_img');
+                        $size = 'recipe-thumb';
+
+                        if( $image ) {
+                           echo wp_get_attachment_image( $image, $size );
+                        }
+                        ?>
                         <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
                         <div class="recipe-list-item-content">
                            <?php if( get_field('preparation_time') ): ?>

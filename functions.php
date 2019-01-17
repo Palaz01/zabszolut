@@ -42,6 +42,10 @@ if ( ! function_exists( 'zabszolut_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'event-thumb', 225, 200, '' );
+		add_image_size( 'product-thumb', 423, 601, '' );
+		add_image_size( 'recipe-thumb', 404, 400, '' );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'zabszolut' ),
@@ -208,9 +212,3 @@ function wpb_custom_new_menu() {
 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 	'after_widget' => '</aside>'
 ) );
-
-
-// Custom image size
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'recipe-thumb', 404, 303, true ); //(cropped)
-}

@@ -1,0 +1,35 @@
+.about-page-content {
+   padding-bottom: 0;
+   
+   hr {
+      margin-bottom: 50px;
+   }
+
+   img {
+      box-shadow: $deep-shadow;
+      border-radius: 5px;
+      width: 100%;
+      height: auto;
+      float: left;
+   }
+
+   p {
+      margin-bottom: 20px;
+   }
+
+   .columns {
+      margin-bottom: 70px;
+
+      &:nth-child(even) {
+         flex-direction: row-reverse;
+      }      
+   }
+
+   .text {
+      box-shadow: $card-shadow;
+      padding-left: 40px;
+      padding-right: 40px;
+      background: #fff;
+      border-radius: 5px;
+   }
+}

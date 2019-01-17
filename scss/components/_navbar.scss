@@ -47,8 +47,6 @@
 
       @include until($desktop) {
          box-shadow: none;
-         border-top: $light-border;
-         border-bottom: $light-border;
       }
    }
 }

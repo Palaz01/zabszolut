@@ -13,7 +13,7 @@
       <div class="columns">      	
          <div class="column is-flex is-justifycenter">
             <div class="event-card-img">
-               <img src="<?php the_post_thumbnail(); ?>
+               <?php the_post_thumbnail('event-thumb'); ?>
             </div>
          </div>
          <div class="column is-flex is-aligncenter is-paddingless is-three-fifths">

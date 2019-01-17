@@ -14,7 +14,7 @@ get_header(); ?>
             Termékek
             </h2>
          </div>
-      </div>
+      </div> 
    </div>
    <section class="products-page-content section">
       <div class="container post-list">
@@ -23,8 +23,8 @@ get_header(); ?>
          if($wp_query->have_posts()) :
             while($wp_query->have_posts()) : $wp_query->the_post() ?> 
                <div class="columns product-item is-multiline is-three-quarters is-flex">
-                  <div class="column is-full-mobile product-item-img">
-                     <img src="<?php the_post_thumbnail(); ?>
+                  <div class="column is-full-mobile product-item-img wow" data-wow-offset="500">
+                     <?php the_post_thumbnail('product-thumb'); ?>
                   </div>
                   <div class="column is-full-mobile card">
                      <h4 class="title is-size-4"><?php the_title(); ?></h4>

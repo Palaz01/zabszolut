@@ -41,8 +41,14 @@ get_header(); ?>
             while($wp_query->have_posts()) : $wp_query->the_post() ?>
                <div class="column is-half-tablet is-one-third-desktop">
                   <div class="recipe-list-item">                  
-                     <?php $recipe_img = get_field('recipe_img'); ?>
-                     <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
+                     <?php 
+                     $image = get_field('recipe_img');
+                     $size = 'recipe-thumb';
+
+                     if( $image ) {
+                        echo wp_get_attachment_image( $image, $size );
+                     }
+                     ?>
                      <div class="recipe-list-item-content">
                         <?php if( get_field('preparation_time') ): ?>
                            <div class="prep-time">

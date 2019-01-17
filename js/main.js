@@ -20,7 +20,7 @@ $(document).ready(function(){
 $(document).ready(function() {
    $(".navbar-burger").click(function() {
          $(".navbar-burger").toggleClass("is-active");
-         $(".navbar-menu").toggleClass("is-active");
+         $(".navbar-menu").slideToggle();
 
    });
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
    if(windowsize < 1000) {
       $('.has-dropdown .navbar-link').click(function(e) {
-         $(this).siblings('.navbar-dropdown').toggleClass('is-active');
+         $(this).siblings('.navbar-dropdown').slideToggle();
          e.preventDefault();
       });
    }
@@ -36,11 +36,24 @@ $(document).ready(function() {
    $(window).resize(function() {
       if(windowsize < 1000) {
          $('.has-dropdown .navbar-link').click(function(e) {
-            $(this).siblings('.navbar-dropdown').toggleClass('is-active');
+            $(this).siblings('.navbar-dropdown').slideToggle();
             e.preventDefault();
          });
       }
    });
 });
 
+// Animate products
+
+$(document).ready(function() {
+   $('.product-item-img:odd').addClass('slideInRight');
+   $('.product-item-img:even').addClass('slideInLeft');
+});
+
+$(document).ready(function($){
+   $('img').each(function(){
+   $(this).removeAttr('width')
+   $(this).removeAttr('height');
+  });
+});
 new WOW().init();
