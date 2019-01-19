@@ -17,7 +17,7 @@ get_header(); ?>
 					<div class="column is-half-desktop">
 						<?php the_post_thumbnail(); ?> 
 					</div>
-					<div class="column is-half-desktop text">
+					<div class="column is-half-desktop text story-text wow">
 						<h2><?php the_title(); ?></h2>
 						<p><?php the_field('milestone_text'); ?></p>
 					</div>				

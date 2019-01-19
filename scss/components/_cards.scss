@@ -8,10 +8,26 @@
    width: 100%;
    
    &-img {
-      @include size(225px, 200px);
+      @include size(100%, 200px);
       border-radius: 10px;
+      margin-left: 10px;
       box-shadow: 3.078px 3.94px 16px 0px rgba(0, 0, 0, 0.13);
       margin-top: -40px;
+
+      @include from($desktop) {
+         @include size(150px, 150px);
+      }
+
+      @include from($widescreen) {
+         @include size(225px, 200px);
+      }
+
+      @include until($tablet) {
+         width: 95%;
+         margin: 10px 0 0 0;
+         box-shadow: none;
+         border-radius: 0;
+      }
 
       img {
          width: 100%;
@@ -22,13 +38,6 @@
          @include until($tablet) {
             border-radius: 0;
          }
-      }
-
-      @include until($tablet) {
-         width: 80%;
-         margin-top: 0;
-         box-shadow: none;
-         border-radius: 0;
       }
    }
 

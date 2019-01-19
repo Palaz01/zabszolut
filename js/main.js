@@ -43,8 +43,7 @@ $(document).ready(function() {
    });
 });
 
-// Animate products
-
+// Animate products & story
 $(document).ready(function() {
    $('.product-item-img:odd').addClass('slideInRight');
    $('.product-item-img:even').addClass('slideInLeft');
@@ -56,4 +55,20 @@ $(document).ready(function($){
    $(this).removeAttr('height');
   });
 });
+
+$(document).ready(function() {
+   $('.story-text:even').addClass('slideInRight');
+   $('.story-text:odd').addClass('slideInLeft');
+});
+
+
+// Remove inline width & heights
+$(document).ready(function($){
+   $('img').each(function(){
+   $(this).removeAttr('width')
+   $(this).removeAttr('height');
+  });
+});
+
+// Init Wow
 new WOW().init();

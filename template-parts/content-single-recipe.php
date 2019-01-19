@@ -64,13 +64,14 @@
                   <div class="column is-half-tablet is-one-third-desktop">
                      <div class="recipe-list-item">                   
                         <?php 
-                        $image = get_field('recipe_img');
+                        $img=get_field('recipe_img');
+                        $alt= $img['alt'];
                         $size = 'recipe-thumb';
+                        $thumb = $img['sizes'][ $size ];
 
-                        if( $image ) {
-                           echo wp_get_attachment_image( $image, $size );
-                        }
-                        ?>
+                        if( $img ): ?>
+                           <img class="recipe-thumb" src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>">
+                        <?php endif; ?>
                         <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
                         <div class="recipe-list-item-content">
                            <?php if( get_field('preparation_time') ): ?>

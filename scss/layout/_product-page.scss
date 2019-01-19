@@ -51,4 +51,18 @@
    .hero-subtitle {
       text-transform: uppercase;
    }
+
+   .curly {
+      position: absolute;
+      bottom: -1%;
+      width: 101%;
+
+      img {
+         width: 100%;
+      }
+
+      @include until($tablet) {
+         bottom: -3%;
+      }
+   }
 }

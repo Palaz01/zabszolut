@@ -42,13 +42,15 @@ get_header(); ?>
                <div class="column is-half-tablet is-one-third-desktop">
                   <div class="recipe-list-item">                  
                      <?php 
-                     $image = get_field('recipe_img');
+                     $img=get_field('recipe_img');
+                     $alt= $img['alt'];
                      $size = 'recipe-thumb';
+                     $thumb = $img['sizes'][ $size ];
 
-                     if( $image ) {
-                        echo wp_get_attachment_image( $image, $size );
-                     }
-                     ?>
+                     if( $img ): ?>
+                        <img class="recipe-thumb" src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>">
+                     <?php endif; ?>
+
                      <div class="recipe-list-item-content">
                         <?php if( get_field('preparation_time') ): ?>
                            <div class="prep-time">

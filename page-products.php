@@ -14,7 +14,12 @@ get_header(); ?>
             Termékek
             </h2>
          </div>
-      </div> 
+      </div>
+      <div class="curly">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 90"><style type="text/css">  
+            .st0{fill:#FFFFFF;}
+         </style><path class="st0" d="M500.5 46C288.5 46 102.7 37.2 0 24.1V90h1000V24.2C897.1 37.3 711.9 46 500.5 46z"/></svg>
+	   </div> 
    </div>
    <section class="products-page-content section">
       <div class="container post-list">
@@ -31,7 +36,7 @@ get_header(); ?>
                      <p><?php echo get_excerpt(); ?></p>
                   </div>
                </div>
-            <?php endwhile;
+            <?php endwhile; 
          endif; ?> 
       </div>
       <div class="is-flex is-justifycenter">

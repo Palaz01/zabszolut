@@ -13,7 +13,15 @@
       <div class="featured-card columns is-flex is-alignend">	
          <div class="column is-flex is-justifyend">
             <div class="featured-card-img">
-               <img src="<?php the_post_thumbnail(); ?>
+            <?php 
+            $img=get_field('recipe_img');
+            $alt= $img['alt'];
+            $size = 'big-recipe';
+            $thumb = $img['sizes'][ $size ];
+
+            if( $img ): ?>
+               <img class="recipe-thumb" src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>">
+            <?php endif; ?>
             </div>
          </div>
          <div class="column is-flex is-aligncenter">

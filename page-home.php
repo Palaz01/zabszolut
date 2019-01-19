@@ -137,7 +137,7 @@ get_header(); ?>
 			<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
  
  			<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-			<div class="column is-flex is-justifycenter is-full-tablet is-half-fullhd mg-small">
+			<div class="column is-flex is-justifycenter is-full-tablet is-half-desktop mg-small">
 				<div class="event-card">
 					<div class="columns">						
 						<div class="column is-flex is-justifycenter">
