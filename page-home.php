@@ -168,4 +168,21 @@ get_header(); ?>
 	</div>
 </section>
 
+<section class="section">
+	<div class="container">
+      <h2 class="has-text-centered">Áruink elérhetősége:</h2>
+      <div class="partner-slider">
+         <?php $loop = new WP_Query( array('post_type' => 'partners', )); ?>
+         <?php if($loop->have_posts()) : ?>
+         <?php while($loop->have_posts()) : $loop->the_post() ?>
+            <div class="partner">
+               <img src="<?php the_field('partner_logo'); ?>" alt="">
+            </div>
+         <?php endwhile ?>
+		   <?php endif ?>
+		   <?php wp_reset_query(); ?>
+      </div>
+	</div>
+</section>
+
 <?php get_footer(); ?>

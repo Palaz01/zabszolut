@@ -14,6 +14,28 @@ $(document).ready(function(){
       autoplay: true,
       speed: 1000
    });
+
+   $('.partner-slider').slick({
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+         {
+            breakpoint: 800,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 2
+            }
+         },
+         {
+            breakpoint: 600,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
+   });
 });
 
 // Mobile menu

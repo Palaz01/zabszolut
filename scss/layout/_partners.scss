@@ -1,0 +1,17 @@
+.partner-slider {
+
+   .partner {
+      @include flex(center, center);
+      padding: 0 50px;
+      outline: none !important;
+
+      img {
+         filter: grayscale(100%);
+         opacity: 0.5;
+      }
+   }
+   .slick-track {
+      display: flex;
+      align-items: center;
+   }
+}
