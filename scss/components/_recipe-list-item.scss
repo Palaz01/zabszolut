@@ -4,11 +4,11 @@
    position: relative;
    overflow: hidden;
 
-   /*.recipe-thumb {
+   .recipe-thumb {
       width: 100%;
       height: 100%;
       object-fit: cover;
-   }*/
+   }
 
    &-content {
       position: absolute;
@@ -27,6 +27,11 @@
       .prep-time {
          color: #fff;
          @include flex(flex-start, center);
+      }
+
+      .calory {
+         margin-left: 20px;
+         color: #fff;
       }
    }
 

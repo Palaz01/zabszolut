@@ -33,10 +33,10 @@ get_header(); ?>
             <?php if($loop->have_posts()) : ?>
             <?php while($loop->have_posts()) : $loop->the_post() ?> 
                <div class="columns product-item is-three-quarters is-flex">
-                  <div class="column is-half product-item-img">
-                     <img src="<?php the_post_thumbnail(); ?>
+                  <div class="column is-full-mobile product-item-img">
+                     <?php the_post_thumbnail(); ?>
                   </div>
-                  <div class="column is-half card">
+                  <div class="column is-full-mobile card">
                      <h4 class="title is-size-4"><?php the_title(); ?></h4>
                      <p><?php echo get_excerpt(); ?></p>
                   </div>

@@ -43,19 +43,7 @@ $(document).ready(function() {
    });
 });
 
-// Animate products & story
-$(document).ready(function() {
-   $('.product-item-img:odd').addClass('slideInRight');
-   $('.product-item-img:even').addClass('slideInLeft');
-});
-
-$(document).ready(function($){
-   $('img').each(function(){
-   $(this).removeAttr('width')
-   $(this).removeAttr('height');
-  });
-});
-
+// Animate Story
 $(document).ready(function() {
    $('.story-text:even').addClass('slideInRight');
    $('.story-text:odd').addClass('slideInLeft');

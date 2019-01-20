@@ -15,8 +15,17 @@
       <div class="single-recipe-card columns is-desktop">	
          <div class="column is-flex is-justifyend">
             <div class="single-recipe-card-img">
-               <?php the_post_thumbnail(); ?>
-            </div>
+               <div class="featured-card-img">
+               <?php 
+               $img=get_field('recipe_img');
+               $alt= $img['alt'];
+               $size = 'big-recipe';
+               $thumb = $img['sizes'][ $size ];
+
+               if( $img ): ?>
+                  <img class="recipe-thumb" src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>">
+               <?php endif; ?>
+            </div> 
          </div>
          <div class="column is-flex is-aligncenter">
             <div class="single-recipe-card-content">
@@ -50,6 +59,7 @@
             </div>
          </div>					
       </div>
+      </div>
 
       <div class="preparation">
          <h2>Elkészítés</h2>
@@ -74,12 +84,18 @@
                         <?php endif; ?>
                         <img class="recipe-list-item-img" src="<?php echo $recipe_img['url']; ?>" alt="<?php echo $recipe_img['alt']; ?>">
                         <div class="recipe-list-item-content">
-                           <?php if( get_field('preparation_time') ): ?>
-                              <div class="prep-time">
-                                 <img src="<?php bloginfo('template_directory'); ?>/assets/images/clock.svg" alt="clock">
-                                 <span><?php the_field('preparation_time'); ?></span>
-                              </div>
-                           <?php endif; ?>
+                           <div class="is-flex">
+                              <?php if( get_field('preparation_time') ): ?>
+                                 <div class="prep-time">
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/clock.svg" alt="clock">
+                                    <span><?php the_field('preparation_time'); ?></span>
+                                 </div>
+                              <?php endif; ?>
+                              <?php if( get_field('preparation_time') ): ?>
+                                 <span class="calory"><?php the_field('calory'); ?></span>
+                              <?php endif; ?>
+
+                           </div>
                            <a href="<?php echo get_permalink(); ?>">
                               <h4 class="title is-size-4"><?php the_title(); ?></h4>
                            </a>
@@ -91,7 +107,7 @@
             <?php wp_reset_query(); ?>   
          </div>
          <div class="is-justifycenter is-flex">
-            <a href="#" class="button is-primary is-rounded">Minden recept</a>
+            <a href="http://localhost/zabszolut/receptek/" class="button is-primary is-rounded">Minden recept</a>
          </div>
       </div>		
    </div>

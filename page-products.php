@@ -28,7 +28,7 @@ get_header(); ?>
          if($wp_query->have_posts()) :
             while($wp_query->have_posts()) : $wp_query->the_post() ?> 
                <div class="columns product-item is-multiline is-three-quarters is-flex">
-                  <div class="column is-full-mobile product-item-img wow" data-wow-offset="500">
+                  <div class="column is-full-mobile product-item-img">
                      <?php the_post_thumbnail('product-thumb'); ?>
                   </div>
                   <div class="column is-full-mobile card">
