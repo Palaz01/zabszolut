@@ -29,16 +29,16 @@
    &-img {
       padding-left: 12%;
       padding-right: 12%;
+      width: 432px;
+      
+     /* img {
+         width: 100%;
+         height: auto;
+      }*/
 
       @include until($tablet) {
          padding-left: 20%;
          padding-right: 20%;
-      }
-   }
-
-   @include until($tablet) {
-      h4 {
-         text-align: center;
       }
    }
 }
@@ -47,7 +47,10 @@
    background: url('assets/images/koelln.jpg');
    background-size: cover;
    position: relative;
-   background-attachment: fixed;
+
+   @include from($tablet) {
+      background-attachment: fixed;
+   }
 
    .hero-subtitle {
       text-transform: uppercase;

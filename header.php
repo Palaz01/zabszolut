@@ -27,7 +27,7 @@
 			<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
 				<div class="container">
 					<div class="navbar-brand">
-							<a class="navbar-item" href="https://github.com/Poruno/Bulma-Navwalker">
+							<a class="navbar-item" href="http://zabszolutegeszseges.hu">
 								<img class="brand-image" src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png"/>
 							</a>
 

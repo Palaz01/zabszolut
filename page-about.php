@@ -14,7 +14,7 @@ get_header(); ?>
 		if($wp_query->have_posts()) :
 			while($wp_query->have_posts()) : $wp_query->the_post() ?>
 				<div class="columns is-aligncenter">
-					<div class="column is-half-desktop">
+					<div class="column is-half-desktop about-page-img">
 						<?php the_post_thumbnail(); ?> 
 					</div>
 					<div class="column is-half-desktop text story-text wow">

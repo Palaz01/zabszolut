@@ -5,12 +5,17 @@
       margin-bottom: 50px;
    }
 
+   .about-page-img {
+      min-height: 200px;
+   }
+
    img {
       box-shadow: $deep-shadow;
       border-radius: 5px;
       width: 100%;
       height: auto;
       float: left;
+      z-index: 100;
    }
 
    p {

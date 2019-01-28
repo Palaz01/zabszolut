@@ -32,9 +32,9 @@ get_header(); ?>
             <?php $loop = new WP_Query( $args ); ?>
             <?php if($loop->have_posts()) : ?>
             <?php while($loop->have_posts()) : $loop->the_post() ?> 
-               <div class="columns product-item is-three-quarters is-flex">
-                  <div class="column is-full-mobile product-item-img">
-                     <?php the_post_thumbnail(); ?>
+               <div class="columns product-item is-multiline is-three-quarters is-flex">
+                  <div class="column is-full-mobile product-item-img"> 
+                     <?php the_post_thumbnail('product-thumb'); ?>
                   </div>
                   <div class="column is-full-mobile card">
                      <h4 class="title is-size-4"><?php the_title(); ?></h4>
@@ -44,7 +44,7 @@ get_header(); ?>
             <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_query(); ?> 
-         </div>
+         </div> 
       </div>
    </section>
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 $(document).ready(function(){
    $('.main-slider-wrap').slick({
-      prevArrow: '<button class="slick-prev"><img src="wp-content/themes/zabszolut/assets/images/chevron.svg"></img></button>',
+      preletrow: '<button class="slick-prev"><img src="wp-content/themes/zabszolut/assets/images/chevron.svg"></img></button>',
       nextArrow: '<button class="slick-next"><img src="wp-content/themes/zabszolut/assets/images/chevron.svg"></img></button>',
       dots: true,
       autoplay: true,
@@ -46,9 +46,7 @@ $(document).ready(function() {
 
    });
 
-   const windowsize = $(window).width();
-
-   if(windowsize < 1000) {
+   if($(window).width() < 1000) {
       $('.has-dropdown .navbar-link').click(function(e) {
          $(this).siblings('.navbar-dropdown').slideToggle();
          e.preventDefault();
@@ -56,7 +54,7 @@ $(document).ready(function() {
    }
    
    $(window).resize(function() {
-      if(windowsize < 1000) {
+      if($(window).width() < 1000) {
          $('.has-dropdown .navbar-link').click(function(e) {
             $(this).siblings('.navbar-dropdown').slideToggle();
             e.preventDefault();
@@ -82,3 +80,16 @@ $(document).ready(function($){
 
 // Init Wow
 new WOW().init();
+
+$(document).ready(function(){
+
+   if($(window).width() > 1000) {
+      $('.advantages-img').attr('data-wow-offset', '300');
+   }
+
+   $(window).resize(function() {
+      if($(window).width() > 1000) {
+         $('.advantages-img').attr('data-wow-offset', '300');
+      } else $('.advantages-img').removeAttr('data-wow-offset', '300');
+   });
+});

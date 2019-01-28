@@ -43,7 +43,7 @@ if ( ! function_exists( 'zabszolut_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		add_image_size( 'event-thumb', 225, 200, TRUE);
-		add_image_size( 'product-thumb', 423, 601, TRUE);
+		add_image_size( 'product-thumb', 432, 660, TRUE);
 		add_image_size( 'recipe-thumb', 404, 400, TRUE);
 		add_image_size( 'big-recipe', 500, 500, TRUE);
 

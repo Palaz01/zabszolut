@@ -25,6 +25,10 @@
             display: none;
          }
       }
+
+      @include until($tablet) {
+         padding: 25px;
+      }
    }
 
    .right-column {

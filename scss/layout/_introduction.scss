@@ -7,12 +7,12 @@
    .columns {
       height: 520px;
 
-      @include until($tablet) {
-         height: auto;
-      }
-
       @include until($desktop) {
          height: 400px;
+      }
+
+      @include until($tablet) {
+         height: auto;
       }
    }
 
@@ -42,6 +42,10 @@
       p {
          max-width: 530px;
          margin-bottom: 25px;
+
+         @include until($tablet) {
+            max-width: 100%;
+         }
       }
 
       .top-right-img {

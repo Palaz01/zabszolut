@@ -15,7 +15,6 @@
       <div class="single-recipe-card columns is-desktop">	
          <div class="column is-flex is-justifyend">
             <div class="single-recipe-card-img">
-               <div class="featured-card-img">
                <?php 
                $img=get_field('recipe_img');
                $alt= $img['alt'];

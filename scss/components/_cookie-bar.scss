@@ -1,0 +1,11 @@
+.cookie-notice-container {
+   @include flex(center, center);
+
+   .button {
+      min-width: 0px;
+   }
+   
+   span {
+      font-size: 15px;
+   }
+}

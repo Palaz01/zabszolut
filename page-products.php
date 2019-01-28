@@ -35,7 +35,7 @@ get_header(); ?>
                      <h4 class="title is-size-4"><?php the_title(); ?></h4>
                      <p><?php echo get_excerpt(); ?></p>
                   </div>
-               </div>
+               </div> 
             <?php endwhile; 
          endif; ?> 
       </div>
