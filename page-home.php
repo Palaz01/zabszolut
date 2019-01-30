@@ -125,7 +125,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="events section">
+<!--<section class="events section">
 	<div class="container">
 		<div class="columns">
 			<div class="column is-three-fifths is-offset-one-fifth events-intro">
@@ -166,7 +166,7 @@ get_header(); ?>
 			<a href="#" class="button is-primary is-rounded">Tovább az eseményekhez</a>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <section class="section">
 	<div class="container">
