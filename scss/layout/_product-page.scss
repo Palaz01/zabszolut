@@ -30,6 +30,7 @@
       padding-left: 12%;
       padding-right: 12%;
       width: 432px;
+      @include flex(center, center);
       
      /* img {
          width: 100%;

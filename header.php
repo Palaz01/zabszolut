@@ -28,7 +28,7 @@
 				<div class="container">
 					<div class="navbar-brand">
 							<a class="navbar-item" href="http://zabszolutegeszseges.hu">
-								<img class="brand-image" src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png"/>
+								<img class="brand-image" src="<?php bloginfo('template_directory'); ?>/assets/images/logo.jpg"/>
 							</a>
 
 							<button class="navbar-burger burger" data-target="primary-menu">
