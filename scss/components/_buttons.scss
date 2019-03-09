@@ -28,5 +28,13 @@
    @extend .button;
    @extend .is-primary;
    @extend .is-rounded;
+
+   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 70px;
+
+      .elm-loading-anim {
+         display: none;
+      }
+   }
 }
  

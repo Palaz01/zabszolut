@@ -1,14 +1,29 @@
 @mixin flex($justify, $align) {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: $justify;
-   align-items: $align;
+   -webkit-box-pack: $justify;
+       -ms-flex-pack: $justify;
+           justify-content: $justify;
+   -webkit-box-align: $align;
+       -ms-flex-align: $align;
+           align-items: $align;
 }
 
 @mixin flex-column($justify, $align) {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   justify-content: $justify;
-   align-items: $align;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-pack: $justify;
+       -ms-flex-pack: $justify;
+           justify-content: $justify;
+   -webkit-box-align: $align;
+       -ms-flex-align: $align;
+           align-items: $align;
 }
 
 @mixin size($width, $height) {

@@ -17,6 +17,11 @@
     
      }
 
+   img {
+      width: 60px;
+      max-height: 100%;
+   }
+
    .navbar-link {
       @include until($desktop) {
          padding-left: 20px;

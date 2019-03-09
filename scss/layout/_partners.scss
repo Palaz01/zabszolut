@@ -8,10 +8,10 @@
       img {
          filter: grayscale(100%);
          opacity: 0.5;
+         width: 100%;
       }
    }
    .slick-track {
-      display: flex;
-      align-items: center;
+      @include flex(null, center);
    }
 }

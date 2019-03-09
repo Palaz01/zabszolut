@@ -17,7 +17,6 @@ get_header(); ?>
             <div class="map"></div>
             <div>
                <h4 class="title is-size-4">Elérhetőségeink</h4>
-               <p>Proin a orci a turpis hendrerit tempor. Cras at elementum mi, vitae auctor.</p>
                <p class="is-flex is-aligncenter"> 
                   <span>
                      <img src="<?php bloginfo('template_directory'); ?>/assets/images/marker.png" alt="marker">

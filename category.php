@@ -20,8 +20,8 @@ get_header(); ?>
 	   </div> 
    </div>
    <section class="products-page-content section">
-      <div class="container">
-         <div class="columns is-multiline is-justifycenter">
+      <div class="container post-list">
+
             <?php $current_category = single_cat_title("", false); ?>
             <?php
                $args = array(
@@ -44,7 +44,7 @@ get_header(); ?>
             <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_query(); ?> 
-         </div> 
+
       </div>
    </section>
 <?php get_footer(); ?>
