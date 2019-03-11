@@ -17,7 +17,7 @@
 		<div class="container top-footer">
 			<div class="columns">
 				<div class="column">
-					<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-gray.png" alt="koelln logo">
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/koelln-logo.svg" alt="koelln logo">
 					<?php
 						if(is_active_sidebar('footer-sidebar')){
 						dynamic_sidebar('footer-sidebar');

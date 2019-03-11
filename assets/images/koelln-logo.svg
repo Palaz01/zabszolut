@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_x5F_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 141.7 131.1" style="enable-background:new 0 0 141.7 131.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#00BDF2;}
+	.st1{clip-path:url(#SVGID_2_);fill:#0E3178;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{fill:#FFFFFF;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" y="0" width="141.7" height="131.1"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect y="0" class="st0" width="93.3" height="95.6"/>
+	<rect x="93.3" y="0" class="st1" width="48.5" height="95.6"/>
+	<rect y="95.6" class="st1" width="93.3" height="35.4"/>
+	<rect x="93.3" y="95.6" class="st0" width="48.5" height="35.4"/>
+	<g class="st2">
+		
+			<image style="overflow:visible;opacity:0.45;" width="3867" height="1594" xlink:href="95658E46.png"  transform="matrix(3.000000e-02 0 0 3.000000e-02 14.5679 40.3374)">
+		</image>
+		<g>
+			<path class="st3" d="M58.9,57.6c-4.3,0-7,4.4-7,10.1C52,74,54.9,78,59.2,78c4.3,0,7.1-4.9,7.1-10.2
+				C66.3,61.9,63.5,57.6,58.9,57.6 M59,83.1c-7.3,0-12.8-6.2-12.8-15.2c0-9.5,5.6-15.3,12.9-15.3c7.4,0,12.9,6.1,12.9,15.1
+				C72.1,77.3,66.4,83.1,59,83.1 M28.9,62.4l-7,8.6v11.3h-5.6V43.6h5.6v19.9l15.8-19.9h6.6L32.8,57.7l14,24.6H40L28.9,62.4z
+				 M119.8,82.3V65.9c0-5.9-2.2-7.9-6-7.9c-3.8,0-6,2.7-6,7.4v17h-5.7V55l5.7-2.2v3.2c1.4-1.9,4.3-3.4,7.3-3.4
+				c6.7,0,10.3,4.4,10.3,13v16.6H119.8z M95.5,82.3V42l-5.7,2.8v37.5H95.5z M77.4,82.3V44.8l5.7-2.8v40.3H77.4z M54.1,49.6
+				c-1.7,0-3.2-1.5-3.2-3.1c0-1.7,1.5-3.2,3.2-3.2c1.7,0,3.1,1.5,3.1,3.2C57.2,48.1,55.8,49.6,54.1,49.6 M63.9,49.6
+				c-1.7,0-3.2-1.5-3.2-3.1c0-1.7,1.5-3.2,3.2-3.2c1.7,0,3.1,1.5,3.1,3.2C67.1,48.1,65.6,49.6,63.9,49.6"/>
+		</g>
+	</g>
+</g>
+</svg>

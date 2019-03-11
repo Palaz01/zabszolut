@@ -26,6 +26,11 @@
    .top-footer {
       padding: 0 25px 50px 25px;
 
+      img {
+         width: 70px;
+         filter: grayscale(1);
+      }
+
       ul {
          display: flex;
          li {
