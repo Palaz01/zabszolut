@@ -14,8 +14,8 @@
    <div class="container">      
       <div class="columns is-multiline">
          <div class="column is-one-third-widescreen is-one-third-fullhd is-one-third-desktop is-full-tablet">
-            <img src="<?php the_post_thumbnail(); ?>
-         </div>
+         <?php the_post_thumbnail(); ?>
+         </div> 
          <div class="column">
             <div class="single-product-content">
                <p><?php the_content(); ?></p> 

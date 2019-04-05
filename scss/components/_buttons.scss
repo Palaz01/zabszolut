@@ -28,13 +28,10 @@
    @extend .button;
    @extend .is-primary;
    @extend .is-rounded;
+   width: 70px;
 
-   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      width: 70px;
-
-      .elm-loading-anim {
-         display: none;
-      }
-   }
+   .elm-loading-anim {
+      display: none;
+   }  
 }
  

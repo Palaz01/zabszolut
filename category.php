@@ -21,30 +21,35 @@ get_header(); ?>
    </div>
    <section class="products-page-content section">
       <div class="container post-list">
-
-            <?php $current_category = single_cat_title("", false); ?>
-            <?php
-               $args = array(
-               'post_type' => 'products', 
-               'category_name'  => $current_category
-               ); 
-            ?>
-            <?php $loop = new WP_Query( $args ); ?>
-            <?php if($loop->have_posts()) : ?>
-            <?php while($loop->have_posts()) : $loop->the_post() ?> 
-               <div class="columns product-item is-multiline is-three-quarters is-flex">
-                  <div class="column is-full-mobile product-item-img"> 
-                     <?php the_post_thumbnail('product-thumb'); ?>
+         <?php $current_category = single_cat_title("", false); ?>
+         <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array(
+            'post_type' => 'products', 
+            'category_name'  => $current_category,
+            'paged' => $paged,
+            'posts_per_page' => 6
+            ); 
+            $wp_query = new WP_Query( $args );
+            if($wp_query->have_posts()) : 
+               while($wp_query->have_posts()) : $wp_query->the_post() ?> 
+                  <div class="columns product-item is-multiline is-three-quarters is-flex">
+                     <div class="column is-full-mobile product-item-img"> 
+                        <?php the_post_thumbnail('product-thumb'); ?>
+                     </div>
+                     <div class="column is-full-mobile card">
+                        <h4 class="title is-size-4"><?php the_title(); ?></h4>
+                        <p><?php echo get_excerpt(); ?></p>
+                     </div>
                   </div>
-                  <div class="column is-full-mobile card">
-                     <h4 class="title is-size-4"><?php the_title(); ?></h4>
-                     <p><?php echo get_excerpt(); ?></p>
-                  </div>
-               </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_query(); ?> 
-
+               <?php endwhile;
+            endif; 
+         ?>
+      </div>
+      <div class="is-flex is-justifycenter">
+         <?php if ( $wp_query->max_num_pages > 1 ) :
+            load_more_button();
+         endif;
+         wp_reset_query(); ?> 
       </div>
    </section>
 <?php get_footer(); ?>
