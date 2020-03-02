@@ -17,7 +17,7 @@
 		<div class="container top-footer">
 			<div class="columns">
 				<div class="column">
-					<img src="<?php bloginfo('template_directory'); ?>/assets/images/koelln-logo.svg" alt="koelln logo">
+					<img style="max-width: 100px" src="<?php bloginfo('template_directory'); ?>/assets/images/koelln_logo.jpg" alt="koelln logo">
 					<?php
 						if(is_active_sidebar('footer-sidebar')){
 						dynamic_sidebar('footer-sidebar');
@@ -26,9 +26,9 @@
 				</div>
 				<div class="column is-flex">
 					<?php
-					wp_nav_menu( array( 
-						'theme_location' => 'footer-menu', 
-						'container_class' => '' ) ); 
+					wp_nav_menu( array(
+						'theme_location' => 'footer-menu',
+						'container_class' => '' ) );
 					?>
 				</div>
 			</div>
@@ -41,9 +41,9 @@
 					</div>
 					<div class="column is-flex is-justifyend">
 						<?php
-						wp_nav_menu( array( 
-							'theme_location' => 'footer-menu-2', 
-							'container_class' => '' ) ); 
+						wp_nav_menu( array(
+							'theme_location' => 'footer-menu-2',
+							'container_class' => '' ) );
 						?>
 					</div>
 				</div>
